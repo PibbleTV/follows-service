@@ -38,11 +38,11 @@ jobs:
 
       - name: Push Docker image to GHCR
         run: |
-          docker push pibbletv-follows-service:latest 
+          docker push ghcr.io/pibbletv/pibbletv-follows-service:latest
 
       - name: Test pulling image from GHCR
         run: |
-          docker pull pibbletv-follows-service:latest 
+          docker pull ghcr.io/pibbletv/pibbletv-follows-service:latest
 
       - name: Initialize release pipeline
         run: gh workflow run "deploy-to-test-server.yml" --json
