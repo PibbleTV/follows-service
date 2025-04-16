@@ -41,7 +41,7 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
 
       - name: Run tests and SonarCloud analysis
-        run: ./gradlew clean test jacocoTestReport sonar -Dsonar.organization=pibbletv -Dsonar.projectKey=PibbleTV_follows-service -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+        run: ./gradlew clean test jacocoTestReport sonar -Dsonar.organization=PibbleTV -Dsonar.projectKey=PibbleTV_follows-service -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} -Dsonar.token=${{ secrets.SONAR_TOKEN }}
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
