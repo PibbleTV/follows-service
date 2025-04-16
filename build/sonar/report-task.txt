@@ -1,0 +1,6 @@
+projectKey=follows-service
+serverUrl=http://localhost:9000
+serverVersion=25.4.0.105899
+dashboardUrl=http://localhost:9000/dashboard?id=follows-service
+ceTaskId=1231c0f0-7b44-4e1b-bcbb-9c5fb949eba9
+ceTaskUrl=http://localhost:9000/api/ce/task?id=1231c0f0-7b44-4e1b-bcbb-9c5fb949eba9
