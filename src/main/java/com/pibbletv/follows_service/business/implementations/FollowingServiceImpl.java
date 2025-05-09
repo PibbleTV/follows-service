@@ -16,26 +16,26 @@ public class FollowingServiceImpl implements FollowingService {
     private final FollowingRepository followingRepository;
 
     @Override
-    public Mono<Void> followUser(Following following)
-    {
-        return followingRepository.save(FollowingConverter.convertToEntity(following)).then();
+    public Mono<Void> followUser(Following following) {
+        return followingRepository.save(FollowingConverter.convertToEntity(following))
+                .then();
     }
 
     @Override
-    public Mono<Void> unfollowUser(Following following)
-    {
-        return followingRepository.delete(FollowingConverter.convertToEntity(following)).then();
+    public Mono<Void> unfollowUser(Following following) {
+        return followingRepository.delete(FollowingConverter.convertToEntity(following))
+                .then();
     }
 
     @Override
-    public Flux<Following> getFollowers(Long userId)
-    {
-        return followingRepository.findByFollowedId(userId).map(FollowingConverter::convertToObject);
+    public Flux<Following> getFollowers(Long userId) {
+        return followingRepository.findByFollowedId(userId)
+                .map(FollowingConverter::convertToObject);
     }
 
     @Override
-    public Flux<Following> getFollowing(Long userId)
-    {
-        return followingRepository.findByFollowerId(userId).map(FollowingConverter::convertToObject);
+    public Flux<Following> getFollowing(Long userId) {
+        return followingRepository.findByFollowerId(userId)
+                .map(FollowingConverter::convertToObject);
     }
 }
