@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.pibbletv.follows_service.unit.FollowsServiceImplTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-05-12T21:51:58.711Z" hostname="DESKTOP-NS6POVE" time="2.201">
+  <properties/>
+  <testcase name="unfollowUser_shouldReturnError_whenRepositoryFails()" classname="com.pibbletv.follows_service.unit.FollowsServiceImplTest" time="1.977"/>
+  <testcase name="getFollowers_shouldReturnListOfFollowers()" classname="com.pibbletv.follows_service.unit.FollowsServiceImplTest" time="0.175"/>
+  <testcase name="getFollowers_shouldReturnError_whenRepositoryFails()" classname="com.pibbletv.follows_service.unit.FollowsServiceImplTest" time="0.006"/>
+  <testcase name="unfollowUser_shouldCompleteSuccessfully()" classname="com.pibbletv.follows_service.unit.FollowsServiceImplTest" time="0.02"/>
+  <testcase name="getFollowing_shouldReturnListOfFollowing()" classname="com.pibbletv.follows_service.unit.FollowsServiceImplTest" time="0.003"/>
+  <testcase name="followUser_shouldReturnError_whenRepositoryFails()" classname="com.pibbletv.follows_service.unit.FollowsServiceImplTest" time="0.005"/>
+  <testcase name="getFollowing_shouldReturnError_whenRepositoryFails()" classname="com.pibbletv.follows_service.unit.FollowsServiceImplTest" time="0.003"/>
+  <testcase name="followUser_shouldCompleteSuccessfully()" classname="com.pibbletv.follows_service.unit.FollowsServiceImplTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
