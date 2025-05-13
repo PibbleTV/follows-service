@@ -16,27 +16,27 @@ public class FollowingServiceImpl implements FollowingService {
     private final FollowingRepository followingRepository;
 
     @Override
-    public Mono&lt;Void&gt; followUser(Following following)
-    {
-<span class="fc" id="L21">        return followingRepository.save(FollowingConverter.convertToEntity(following)).then();</span>
+    public Mono&lt;Void&gt; followUser(Following following) {
+<span class="fc" id="L20">        return followingRepository.save(FollowingConverter.convertToEntity(following))</span>
+<span class="fc" id="L21">                .then();</span>
     }
 
     @Override
-    public Mono&lt;Void&gt; unfollowUser(Following following)
-    {
-<span class="fc" id="L27">        return followingRepository.delete(FollowingConverter.convertToEntity(following)).then();</span>
+    public Mono&lt;Void&gt; unfollowUser(Following following) {
+<span class="fc" id="L26">        return followingRepository.delete(FollowingConverter.convertToEntity(following))</span>
+<span class="fc" id="L27">                .then();</span>
     }
 
     @Override
-    public Flux&lt;Following&gt; getFollowers(Long userId)
-    {
-<span class="fc" id="L33">        return followingRepository.findByFollowedId(userId).map(FollowingConverter::convertToObject);</span>
+    public Flux&lt;Following&gt; getFollowers(Long userId) {
+<span class="fc" id="L32">        return followingRepository.findByFollowedId(userId)</span>
+<span class="fc" id="L33">                .map(FollowingConverter::convertToObject);</span>
     }
 
     @Override
-    public Flux&lt;Following&gt; getFollowing(Long userId)
-    {
-<span class="fc" id="L39">        return followingRepository.findByFollowerId(userId).map(FollowingConverter::convertToObject);</span>
+    public Flux&lt;Following&gt; getFollowing(Long userId) {
+<span class="fc" id="L38">        return followingRepository.findByFollowerId(userId)</span>
+<span class="fc" id="L39">                .map(FollowingConverter::convertToObject);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
