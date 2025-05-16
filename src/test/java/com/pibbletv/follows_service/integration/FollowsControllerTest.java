@@ -1,43 +1,43 @@
-package com.pibbletv.follows_service.integration;
-
-import com.netflix.appinfo.InstanceInfo;
-import com.netflix.discovery.EurekaClient;
-import com.netflix.discovery.shared.Application;
-import com.netflix.discovery.shared.Applications;
-import com.pibbletv.follows_service.business.converters.FollowingConverter;
-import com.pibbletv.follows_service.business.implementations.FollowingServiceImpl;
-import com.pibbletv.follows_service.business.interfaces.FollowingService;
-import com.pibbletv.follows_service.domain.Following;
-import com.pibbletv.follows_service.persistance.entities.FollowingEntity;
-import com.pibbletv.follows_service.persistance.repository.FollowingRepository;
-import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.reactive.server.WebTestClient;
-import org.springframework.web.reactive.function.BodyInserters;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
-
-import static org.mockito.Mockito.when;
-
-@SpringBootTest
-@AutoConfigureWebTestClient
-public class FollowsControllerTest {
-
-    @Autowired
-    private WebTestClient webTestClient;
-
-    @InjectMocks
-    private FollowingServiceImpl followingService;
-
-    @Mock
-    private FollowingRepository followingRepository;
-
+//package com.pibbletv.follows_service.integration;
+//
+//import com.netflix.appinfo.InstanceInfo;
+//import com.netflix.discovery.EurekaClient;
+//import com.netflix.discovery.shared.Application;
+//import com.netflix.discovery.shared.Applications;
+//import com.pibbletv.follows_service.business.converters.FollowingConverter;
+//import com.pibbletv.follows_service.business.implementations.FollowingServiceImpl;
+//import com.pibbletv.follows_service.business.interfaces.FollowingService;
+//import com.pibbletv.follows_service.domain.Following;
+//import com.pibbletv.follows_service.persistance.entities.FollowingEntity;
+//import com.pibbletv.follows_service.persistance.repository.FollowingRepository;
+//import org.junit.jupiter.api.Test;
+//import org.mockito.InjectMocks;
+//import org.mockito.Mock;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
+//import org.springframework.boot.test.context.SpringBootTest;
+//import org.springframework.http.HttpMethod;
+//import org.springframework.http.MediaType;
+//import org.springframework.test.web.reactive.server.WebTestClient;
+//import org.springframework.web.reactive.function.BodyInserters;
+//import reactor.core.publisher.Flux;
+//import reactor.core.publisher.Mono;
+//
+//import static org.mockito.Mockito.when;
+//
+//@SpringBootTest
+//@AutoConfigureWebTestClient
+//public class FollowsControllerTest {
+//
+//    @Autowired
+//    private WebTestClient webTestClient;
+//
+//    @InjectMocks
+//    private FollowingServiceImpl followingService;
+//
+//    @Mock
+//    private FollowingRepository followingRepository;
+//
 //    @Test
 //    void followUser_shouldReturn200_whenUserIsFollowed() {
 //
@@ -155,4 +155,4 @@ public class FollowsControllerTest {
 //                .expectHeader().contentTypeCompatibleWith(MediaType.APPLICATION_JSON)
 //                .expectBodyList(Following.class);
 //    }
-}
+//}
