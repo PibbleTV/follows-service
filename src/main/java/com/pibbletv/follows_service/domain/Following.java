@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -13,7 +15,7 @@ public class Following {
 
     private Long id;
 
-    private Long followerId;
+    private UUID followerId;
 
-    private Long followedId;
+    private UUID followedId;
 }
