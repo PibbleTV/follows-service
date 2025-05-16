@@ -20,6 +20,7 @@ import java.util.UUID;
 public class FollowingEntity {
 
     @Id
+    @Column("id")
     private Long id;
 
     @NotNull
