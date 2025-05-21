@@ -10,9 +10,9 @@ public interface FollowingService {
 
     Mono<Void> unfollowUser(Following following);
 
-    Flux<Following> getFollowers(Long userId);
+    Flux<Following> getFollowers(String userId);
 
-    Flux<Following> getFollowing(Long userId);
+    Flux<Following> getFollowing(String userId);
 
 
 }

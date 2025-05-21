@@ -17,26 +17,26 @@ public class FollowingServiceImpl implements FollowingService {
 
     @Override
     public Mono&lt;Void&gt; followUser(Following following) {
-<span class="fc" id="L20">        return followingRepository.save(FollowingConverter.convertToEntity(following))</span>
-<span class="fc" id="L21">                .then();</span>
+<span class="nc" id="L20">        return followingRepository.save(FollowingConverter.convertToEntity(following))</span>
+<span class="nc" id="L21">                .then();</span>
     }
 
     @Override
     public Mono&lt;Void&gt; unfollowUser(Following following) {
-<span class="fc" id="L26">        return followingRepository.delete(FollowingConverter.convertToEntity(following))</span>
-<span class="fc" id="L27">                .then();</span>
+<span class="nc" id="L26">        return followingRepository.delete(FollowingConverter.convertToEntity(following))</span>
+<span class="nc" id="L27">                .then();</span>
     }
 
     @Override
     public Flux&lt;Following&gt; getFollowers(Long userId) {
-<span class="fc" id="L32">        return followingRepository.findByFollowedId(userId)</span>
-<span class="fc" id="L33">                .map(FollowingConverter::convertToObject);</span>
+<span class="nc" id="L32">        return followingRepository.findByFollowedId(userId)</span>
+<span class="nc" id="L33">                .map(FollowingConverter::convertToObject);</span>
     }
 
     @Override
     public Flux&lt;Following&gt; getFollowing(Long userId) {
-<span class="fc" id="L38">        return followingRepository.findByFollowerId(userId)</span>
-<span class="fc" id="L39">                .map(FollowingConverter::convertToObject);</span>
+<span class="nc" id="L38">        return followingRepository.findByFollowerId(userId)</span>
+<span class="nc" id="L39">                .map(FollowingConverter::convertToObject);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

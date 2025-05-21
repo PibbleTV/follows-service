@@ -10,23 +10,23 @@ public final class FollowingConverter {
     }
 
     public static Following convertToObject(FollowingEntity entity) {
-<span class="pc bpc" id="L13" title="1 of 2 branches missed.">        if (entity == null) return null;</span>
+<span class="nc bnc" id="L13" title="All 2 branches missed.">        if (entity == null) return null;</span>
 
-<span class="fc" id="L15">        return Following.builder()</span>
-<span class="fc" id="L16">                .id(entity.getId())</span>
-<span class="fc" id="L17">                .followerId(entity.getFollowerId())</span>
-<span class="fc" id="L18">                .followedId(entity.getFollowedId())</span>
-<span class="fc" id="L19">                .build();</span>
+<span class="nc" id="L15">        return Following.builder()</span>
+<span class="nc" id="L16">                .id(entity.getId())</span>
+<span class="nc" id="L17">                .followerId(entity.getFollowerId())</span>
+<span class="nc" id="L18">                .followedId(entity.getFollowedId())</span>
+<span class="nc" id="L19">                .build();</span>
     }
 
     public static FollowingEntity convertToEntity(Following following) {
-<span class="pc bpc" id="L23" title="1 of 2 branches missed.">        if (following == null) return null;</span>
+<span class="nc bnc" id="L23" title="All 2 branches missed.">        if (following == null) return null;</span>
 
-<span class="fc" id="L25">        return FollowingEntity.builder()</span>
-<span class="fc" id="L26">                .id(following.getId())</span>
-<span class="fc" id="L27">                .followerId(following.getFollowerId())</span>
-<span class="fc" id="L28">                .followedId(following.getFollowedId())</span>
-<span class="fc" id="L29">                .build();</span>
+<span class="nc" id="L25">        return FollowingEntity.builder()</span>
+<span class="nc" id="L26">                .id(following.getId())</span>
+<span class="nc" id="L27">                .followerId(following.getFollowerId())</span>
+<span class="nc" id="L28">                .followedId(following.getFollowedId())</span>
+<span class="nc" id="L29">                .build();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

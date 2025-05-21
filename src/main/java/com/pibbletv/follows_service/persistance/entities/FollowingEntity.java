@@ -10,7 +10,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.util.UUID;
 
 @Data
 @Builder
@@ -25,9 +24,9 @@ public class FollowingEntity {
 
     @NotNull
     @Column("followerId")
-    private UUID followerId;
+    private String followerId;
 
     @NotNull
     @Column("followedId")
-    private UUID followedId;
+    private String followedId;
 }

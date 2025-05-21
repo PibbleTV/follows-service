@@ -28,13 +28,13 @@ public class FollowingServiceImpl implements FollowingService {
     }
 
     @Override
-    public Flux<Following> getFollowers(Long userId) {
+    public Flux<Following> getFollowers(String userId) {
         return followingRepository.findByFollowedId(userId)
                 .map(FollowingConverter::convertToObject);
     }
 
     @Override
-    public Flux<Following> getFollowing(Long userId) {
+    public Flux<Following> getFollowing(String userId) {
         return followingRepository.findByFollowerId(userId)
                 .map(FollowingConverter::convertToObject);
     }
