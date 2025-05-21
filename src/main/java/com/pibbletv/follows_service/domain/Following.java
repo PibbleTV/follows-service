@@ -15,7 +15,7 @@ public class Following {
 
     private Long id;
 
-    private UUID followerId;
+    private String followerId;
 
-    private UUID followedId;
+    private String followedId;
 }
