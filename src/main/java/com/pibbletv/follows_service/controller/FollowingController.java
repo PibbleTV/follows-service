@@ -27,13 +27,13 @@ public class FollowingController {
     }
 
     @GetMapping(value = "/getFollowers")
-    public Flux<Following> getFollowers(@RequestParam Long userId)
+    public Flux<Following> getFollowers(@RequestParam String userId)
     {
         return followingService.getFollowers(userId);
     }
 
     @GetMapping(value = "/getFollowing")
-    public Flux<Following> getFollowing(@RequestParam Long userId)
+    public Flux<Following> getFollowing(@RequestParam String userId)
     {
         return followingService.getFollowing(userId);
     }
