@@ -137,8 +137,6 @@ fabric.properties
 hs_err_pid*
 replay_pid*
 
-# Properties #
-*.properties
 
 # Queries for easy access #
 queries.txt
